@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fernando Lazarine • Portfolio</title>
+  <meta name="description" content="Portfólio futurista dark de Fernando Lazarine — projetos em HTML, CSS e JavaScript." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Cursor glow -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- Background grid -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-vignette" aria-hidden="true"></div>
+
+  <header class="header">
+    <nav class="nav container">
+      <a class="brand" href="#top" aria-label="Ir para o topo">
+        <span class="brand__dot"></span>
+        <span class="brand__text">FCLazarine</span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <div class="nav__links" id="navLinks">
+        <a href="#sobre">Sobre</a>
+        <a href="#skills">Skills</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+        <a class="btn btn--ghost" href="https://github.com/FCLazarine" target="_blank" rel="noreferrer">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero container">
+      <div class="hero__left">
+        <div class="chip reveal">
+          <span class="chip__pulse"></span>
+          <span>Disponível para freelas / projetos</span>
+        </div>
+
+        <h1 class="hero__title reveal">
+          Fernando Lazarine
+          <span class="hero__titleGlow">Dev</span>
+          <span class="hero__titleSub">Front-end • Experiências Web</span>
+        </h1>
+
+        <p class="hero__desc reveal">
+          Portfólio futurista com foco em projetos reais usando <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>.
+          Curto interfaces bonitas, rápidas e bem organizadas.
+        </p>
+
+        <div class="hero__cta reveal">
+          <a class="btn btn--primary" href="#projetos">
+            <i class="fa-solid fa-rocket"></i> Ver Projetos
+          </a>
+          <a class="btn btn--soft" href="#contato">
+            <i class="fa-solid fa-paper-plane"></i> Falar comigo
+          </a>
+        </div>
+
+        <div class="hero__meta reveal">
+          <div class="metaCard">
+            <span class="metaCard__label">Stack</span>
+            <span class="metaCard__value">HTML • CSS • JS</span>
+          </div>
+          <div class="metaCard">
+            <span class="metaCard__label">GitHub</span>
+            <span class="metaCard__value">@FCLazarine</span>
+          </div>
+          <div class="metaCard">
+            <span class="metaCard__label">Estilo</span>
+            <span class="metaCard__value">Dark Futurista</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__right reveal">
+        <div class="terminal">
+          <div class="terminal__top">
+            <span class="dot dot--red"></span>
+            <span class="dot dot--yellow"></span>
+            <span class="dot dot--green"></span>
+            <span class="terminal__title">lab://fernando</span>
+          </div>
+          <div class="terminal__body">
+            <p><span class="t-muted"># status</span></p>
+            <p><span class="t-neon">✔</span> criando projetos e evoluindo diariamente</p>
+            <p><span class="t-muted"># foco atual</span></p>
+            <p>UI moderna • Responsividade • Componentes • JS</p>
+            <p><span class="t-muted"># próximos passos</span></p>
+            <p>Portfólio + Projetos (Pokedex, Apps JS, sites temáticos)</p>
+            <div class="terminal__line">
+              <span class="t-prompt">fernando@lab</span>
+              <span class="t-cmd">:~$</span>
+              <span class="type" id="typed"></span><span class="caret">▍</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__floating">
+          <div class="floatCard">
+            <i class="fa-solid fa-bolt"></i>
+            <div>
+              <strong>Performance</strong>
+              <span>animações leves</span>
+            </div>
+          </div>
+          <div class="floatCard">
+            <i class="fa-solid fa-layer-group"></i>
+            <div>
+              <strong>Layout</strong>
+              <span>grid & cards</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="sobre" class="section container">
+      <div class="section__head reveal">
+        <h2 class="section__title">Sobre</h2>
+        <p class="section__subtitle">Um resumo direto, do jeito que recrutador gosta.</p>
+      </div>
+
+      <div class="aboutGrid">
+        <div class="card glass reveal">
+          <h3><i class="fa-solid fa-user-astronaut"></i> Quem sou</h3>
+          <p>
+            Sou o Fernando, apaixonado por tecnologia e interfaces. Estou construindo uma base sólida no front-end,
+            criando projetos e evoluindo todos os dias.
+          </p>
+        </div>
+
+        <div class="card glass reveal">
+          <h3><i class="fa-solid fa-bullseye"></i> Objetivo</h3>
+          <p>
+            Montar um portfólio forte com projetos completos, organização de código e boas práticas para entrevistas e freelas.
+          </p>
+        </div>
+
+        <div class="card glass reveal">
+          <h3><i class="fa-solid fa-diagram-project"></i> O que eu entrego</h3>
+          <ul class="list">
+            <li>Landing pages modernas</li>
+            <li>Apps simples em JavaScript</li>
+            <li>UI com cards, animações e responsividade</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section container">
+      <div class="section__head reveal">
+        <h2 class="section__title">Skills</h2>
+        <p class="section__subtitle">Visual e animado — sem enrolação.</p>
+      </div>
+
+      <div class="skillsGrid">
+        <div class="card glass reveal">
+          <div class="skillHead">
+            <span><i class="fa-brands fa-html5"></i> HTML</span>
+            <span class="pct" data-pct="85">0%</span>
+          </div>
+          <div class="bar"><span class="fill" data-fill="85"></span></div>
+          <p class="hint">Semântica, acessibilidade básica e estrutura limpa.</p>
+        </div>
+
+        <div class="card glass reveal">
+          <div class="skillHead">
+            <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+            <span class="pct" data-pct="80">0%</span>
+          </div>
+          <div class="bar"><span class="fill" data-fill="80"></span></div>
+          <p class="hint">Flexbox, Grid, responsivo e efeitos modernos.</p>
+        </div>
+
+        <div class="card glass reveal">
+          <div class="skillHead">
+            <span><i class="fa-brands fa-js"></i> JavaScript</span>
+            <span class="pct" data-pct="70">0%</span>
+          </div>
+          <div class="bar"><span class="fill" data-fill="70"></span></div>
+          <p class="hint">DOM, eventos, fetch, lógica e componentes simples.</p>
+        </div>
+
+        <div class="card glass reveal">
+          <div class="skillHead">
+            <span><i class="fa-brands fa-git-alt"></i> Git/GitHub</span>
+            <span class="pct" data-pct="75">0%</span>
+          </div>
+          <div class="bar"><span class="fill" data-fill="75"></span></div>
+          <p class="hint">Commits, repositórios, Pages e organização.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projetos" class="section container">
+      <div class="section__head reveal">
+        <h2 class="section__title">Projetos</h2>
+        <p class="section__subtitle">Troque os links pelos seus projetos reais (ou me manda os nomes que eu ajusto).</p>
+      </div>
+
+      <div class="projectsGrid">
+        <!-- Card 1 -->
+        <article class="project card glass reveal">
+          <div class="project__top">
+            <span class="tag">JavaScript</span>
+            <span class="tag tag--alt">UI</span>
+          </div>
+          <h3>Pokedex App</h3>
+          <p>Lista de Pokémons, detalhes e busca. UI moderna e responsiva.</p>
+          <div class="project__actions">
+            <a class="btn btn--ghost" href="https://github.com/FCLazarine" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-github"></i> Código
+            </a>
+            <a class="btn btn--soft" href="#" aria-disabled="true" onclick="return false;">
+              <i class="fa-solid fa-eye"></i> Demo
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="project card glass reveal">
+          <div class="project__top">
+            <span class="tag">HTML/CSS</span>
+            <span class="tag tag--alt">Landing</span>
+          </div>
+          <h3>Site Temático</h3>
+          <p>Landing page com animações e seções bem organizadas.</p>
+          <div class="project__actions">
+            <a class="btn btn--ghost" href="https://github.com/FCLazarine" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-github"></i> Código
+            </a>
+            <a class="btn btn--soft" href="#" aria-disabled="true" onclick="return false;">
+              <i class="fa-solid fa-eye"></i> Demo
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="project card glass reveal">
+          <div class="project__top">
+            <span class="tag">JavaScript</span>
+            <span class="tag tag--alt">App</span>
+          </div>
+          <h3>Mini App (Utilities)</h3>
+          <p>Um app simples com lógica em JS (calculadora, conversor, etc.).</p>
+          <div class="project__actions">
+            <a class="btn btn--ghost" href="https://github.com/FCLazarine" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-github"></i> Código
+            </a>
+            <a class="btn btn--soft" href="#" aria-disabled="true" onclick="return false;">
+              <i class="fa-solid fa-eye"></i> Demo
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="project card glass reveal">
+          <div class="project__top">
+            <span class="tag">Portfolio</span>
+            <span class="tag tag--alt">Design</span>
+          </div>
+          <h3>Portfólio Futurista</h3>
+          <p>Este próprio site — com grid neon, terminal e efeitos suaves.</p>
+          <div class="project__actions">
+            <a class="btn btn--ghost" href="https://github.com/FCLazarine" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-github"></i> Repo
+            </a>
+            <a class="btn btn--soft" href="#top">
+              <i class="fa-solid fa-arrow-up"></i> Topo
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contato" class="section container">
+      <div class="section__head reveal">
+        <h2 class="section__title">Contato</h2>
+        <p class="section__subtitle">Me chama e bora construir algo legal.</p>
+      </div>
+
+      <div class="contactGrid">
+        <div class="card glass reveal">
+          <h3><i class="fa-solid fa-envelope"></i> Email</h3>
+          <p class="hint">Coloque seu email aqui:</p>
+          <div class="copyRow">
+            <code id="emailText">camillo.lazarine@gmail.com</code>
+            <button class="btn btn--soft btn--icon" id="copyEmail" type="button" aria-label="Copiar email">
+              <i class="fa-regular fa-copy"></i>
+            </button>
+          </div>
+          <span class="toast" id="toast">Copiado!</span>
+        </div>
+
+        <div class="card glass reveal">
+          <h3><i class="fa-brands fa-github"></i> GitHub</h3>
+          <p>Veja meus repositórios e evolução:</p>
+          <a class="btn btn--primary" href="https://github.com/FCLazarine" target="_blank" rel="noreferrer">
+            Abrir GitHub
+          </a>
+        </div>
+
+        <div class="card glass reveal">
+          <h3><i class="fa-solid fa-link"></i> LinkedIn</h3>
+          <p class="hint">Se você tiver, coloca aqui. Se não tiver, deixa esse card como “Em breve”.</p>
+          <a class="btn btn--ghost" href="#" aria-disabled="true" onclick="return false;">
+            Em breve
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <span>© <span id="year"></span> Fernando Lazarine</span>
+    <span class="footer__right">
+      <a href="#top">Topo</a>
+      <span class="sep">•</span>
+      <a href="https://github.com/FCLazarine" target="_blank" rel="noreferrer">GitHub</a>
+    </span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
