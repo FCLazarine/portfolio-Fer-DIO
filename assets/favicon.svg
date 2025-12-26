@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="g" x1="40" y1="40" x2="216" y2="216" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6D6BFF"/>
+      <stop offset="1" stop-color="#00F5FF"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- background (transparent) -->
+  <rect width="256" height="256" fill="none"/>
+
+  <!-- pins -->
+  <g stroke="url(#g)" stroke-width="10" stroke-linecap="round" opacity="0.95" filter="url(#glow)">
+    <!-- top -->
+    <path d="M72 34v28"/><path d="M104 34v28"/><path d="M136 34v28"/><path d="M168 34v28"/>
+    <!-- bottom -->
+    <path d="M72 194v28"/><path d="M104 194v28"/><path d="M136 194v28"/><path d="M168 194v28"/>
+    <!-- left -->
+    <path d="M34 72h28"/><path d="M34 104h28"/><path d="M34 136h28"/><path d="M34 168h28"/>
+    <!-- right -->
+    <path d="M194 72h28"/><path d="M194 104h28"/><path d="M194 136h28"/><path d="M194 168h28"/>
+  </g>
+
+  <!-- chip body -->
+  <rect x="64" y="64" width="128" height="128" rx="22"
+        fill="rgba(255,255,255,0.03)" stroke="url(#g)" stroke-width="10"
+        filter="url(#glow)"/>
+
+  <!-- inner core -->
+  <rect x="96" y="96" width="64" height="64" rx="14"
+        fill="none" stroke="url(#g)" stroke-width="10" opacity="0.95" filter="url(#glow)"/>
+
+  <!-- circuit lines -->
+  <g stroke="url(#g)" stroke-width="8" stroke-linecap="round" opacity="0.9">
+    <path d="M128 96v-18"/>
+    <path d="M128 160v18"/>
+    <path d="M96 128h-18"/>
+    <path d="M160 128h18"/>
+  </g>
+
+  <!-- small nodes -->
+  <g fill="#00F5FF" opacity="0.95" filter="url(#glow)">
+    <circle cx="128" cy="74" r="6"/>
+    <circle cx="128" cy="182" r="6"/>
+    <circle cx="74" cy="128" r="6"/>
+    <circle cx="182" cy="128" r="6"/>
+  </g>
+</svg>
